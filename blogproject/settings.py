@@ -121,3 +121,8 @@ USE_TZ = True
 
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # 指明了静态文件的收集目录，即项目根目录（BASE_DIR）下的 static 文件夹
+
+
+DEBUG = False # 生产环境下需要关闭 DEBUG 选项
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.toeast.info', '.jyan.pro'] # ALLOWED_HOSTS 是允许访问的域名列表,域名前加一个点表示允许访问该域名下的子域名
